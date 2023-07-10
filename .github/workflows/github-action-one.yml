@@ -1,0 +1,10 @@
+name: First GH Action Workflow
+on: workflow_dispatch
+jobs:
+  job_one:
+    runs-on: mac-os-13-xl
+    steps: 
+      - name: Print Something
+        run: echo 'Hello, Aaron.'
+      - name: Print Something Else
+        run: echo 'Goodbye, Aaron.'
