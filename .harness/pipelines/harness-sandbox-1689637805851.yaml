@@ -1,0 +1,33 @@
+pipeline:
+  name: Build harness-sandbox
+  identifier: Build_harness_sandbox_1689637976616
+  projectIdentifier: aaron_carpenter_sandbox
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          infrastructure:
+            type: KubernetesHosted
+            spec:
+              identifier: k8s-hosted-infra
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: alpine
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1686276592453
+        repoName: aaronkcarpenter/harness-sandbox
+        build: <+input>
