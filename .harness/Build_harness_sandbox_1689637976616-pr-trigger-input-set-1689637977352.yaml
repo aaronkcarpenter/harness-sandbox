@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_harness_sandbox_1689637976616-pr-trigger-input-set
+  identifier: Build_harness_sandbox_1689637976616prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: aaron_carpenter_sandbox
+  pipeline:
+    identifier: Build_harness_sandbox_1689637976616
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
