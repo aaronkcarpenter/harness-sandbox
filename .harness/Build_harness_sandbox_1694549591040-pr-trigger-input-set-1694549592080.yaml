@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_harness_sandbox_1694549591040-pr-trigger-input-set
+  identifier: Build_harness_sandbox_1694549591040prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: RolesTest
+  pipeline:
+    identifier: Build_harness_sandbox_1694549591040
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
