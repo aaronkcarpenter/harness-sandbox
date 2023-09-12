@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_harness_sandbox_1694549591040-push-trigger-input-set
+  identifier: Build_harness_sandbox_1694549591040pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: RolesTest
+  pipeline:
+    identifier: Build_harness_sandbox_1694549591040
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
